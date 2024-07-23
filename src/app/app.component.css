@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.bg-beige {
+  background-color: beige;
+}
+
+.bg-orange {
+  background-color: orange;
+}
+
+.text-beige {
+  color: beige;
+}
