@@ -1,3 +1,42 @@
-<h1>Events</h1>
-<p>Próximos eventos musicales</p>
-    
+<div class="container mt-5">
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="text-dark-brown mb-4">Próximos Eventos Musicales</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let event of upcomingEvents">
+        <div class="card bg-light-orange mb-4">
+          <img src="{{ event.image }}" class="card-img-top" alt="{{ event.name }}">
+          <div class="card-body">
+            <h5 class="card-title text-dark-brown">{{ event.name }}</h5>
+            <p class="card-text text-brown">Fecha: {{ event.date }}</p>
+            <p class="card-text text-brown">Ubicación: {{ event.location }}</p>
+            <button class="btn btn-custom" (click)="openEventDetails(event)">Ver Detalles</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eventModalLabel">{{ selectedEvent?.name }}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img *ngIf="selectedEvent?.image" [src]="selectedEvent?.image" class="img-fluid mb-3" alt="{{ selectedEvent?.name }}">
+            <p><strong>Fecha:</strong> {{ selectedEvent?.date }}</p>
+            <p><strong>Ubicación:</strong> {{ selectedEvent?.location }}</p>
+            <p>{{ selectedEvent?.description }}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cerrar-modal" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

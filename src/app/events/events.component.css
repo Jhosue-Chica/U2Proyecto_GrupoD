@@ -1,0 +1,17 @@
+.btn-custom {
+    background-color: #4b2121;
+    color: #f19a1a;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #f19a1a;
+    color: #4b2121;
+}
+
+.btn-cerrar-modal {
+    background-color: #4b2121;
+    color: #f19a1a;
+    border: none;
+}
+
