@@ -1,0 +1,51 @@
+body {
+    font-family:  Tahoma, sans-serif;
+  }
+
+  .text-dark-brown {
+    color: var(--color-dark-brown);
+  }
+
+  .text-brown {
+    color: var(--color-brown);
+  }
+
+  .text-rust {
+    color: var(--color-rust);
+  }
+
+  .text-orange {
+    color: var(--color-orange);
+  }
+
+  .text-light-orange {
+    color: var(--color-light-orange);
+  }
+
+  .text-yellow {
+    color: var(--color-yellow);
+  }
+
+  .bg-dark-brown {
+    background-color: var(--color-dark-brown);
+  }
+
+  .bg-brown {
+    background-color: var(--color-brown);
+  }
+
+  .bg-rust {
+    background-color: var(--color-rust);
+  }
+
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+
+  .bg-light-orange {
+    background-color: var(--color-light-orange);
+  }
+
+  .bg-yellow {
+    background-color: var(--color-yellow);
+  }

@@ -1,98 +1,98 @@
 <div class="container mt-5">
-    <div class="row">
-      <div class="col text-center">
-        <h1 class="text-dark-brown mb-4">About Us</h1>
-        
-        <div class="card bg-yellow mb-4">
-          <div class="card-body">
-            <h2 class="card-title text-dark-brown">¿Quiénes Somos?</h2>
-            <p class="card-text text-brown">
-              MelodyShop es tu fuente número uno para la mejor música y eventos en vivo. Nos dedicamos a ofrecerte lo mejor en música y experiencias, con un enfoque en la calidad, la confianza y el servicio al cliente.
-            </p>
-            <p class="card-text text-rust">
-              Fundada en 2024, MelodyShop ha recorrido un largo camino desde sus inicios. Cuando comenzamos, nuestra pasión por la música y los eventos en vivo nos impulsó a crear esta plataforma para que puedas disfrutar de la mejor música en cualquier momento y lugar.
-            </p>
-            <p class="card-text text-orange">
-              Esperamos que disfrutes de nuestra música tanto como nosotros disfrutamos ofreciéndotela. Si tienes alguna pregunta o comentario, no dudes en contactarnos.
-            </p>
-          </div>
+  <div class="row">
+    <div class="col text-center">
+      <h1 class="text-dark-brown mb-4">About Us</h1>
+      
+      <div class="card bg-yellow mb-4">
+        <div class="card-body">
+          <h2 class="card-title text-dark-brown">¿Quiénes Somos?</h2>
+          <p class="card-text text-brown">
+            MelodyShop es tu fuente número uno para la mejor música y eventos en vivo. Nos dedicamos a ofrecerte lo mejor en música y experiencias, con un enfoque en la calidad, la confianza y el servicio al cliente.
+          </p>
+          <p class="card-text text-rust">
+            Fundada en 2024, MelodyShop ha recorrido un largo camino desde sus inicios. Cuando comenzamos, nuestra pasión por la música y los eventos en vivo nos impulsó a crear esta plataforma para que puedas disfrutar de la mejor música en cualquier momento y lugar.
+          </p>
+          <p class="card-text text-orange">
+            Esperamos que disfrutes de nuestra música tanto como nosotros disfrutamos ofreciéndotela. Si tienes alguna pregunta o comentario, no dudes en contactarnos.
+          </p>
         </div>
-  
-        <div class="card bg-yellow mb-4">
-          <div class="card-body">
-            <h2 class="card-title text-dark-brown">Nuestro Equipo</h2>
-            <div class="row">
-              <div class="col-md-4" *ngFor="let member of teamMembers" (click)="selectMember(member)">
-                <div class="card bg-light-orange mb-3">
-                  <div class="card-body">
-                    <h5 class="card-title text-dark-brown">{{ member.name }}</h5>
-                    <p class="card-text text-brown">{{ member.role }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div *ngIf="selectedMember" class="mt-4">
-              <h3 class="text-rust">Información del Miembro</h3>
+      </div>
+
+      <div class="card bg-yellow mb-4">
+        <div class="card-body">
+          <h2 class="card-title text-dark-brown">Nuestro Equipo</h2>
+          <div class="row">
+            <div class="col-md-4" *ngFor="let member of teamMembers" (click)="selectMember(member)">
               <div class="card bg-light-orange mb-3">
                 <div class="card-body">
-                  <p class="text-dark-brown">Nombre: {{ selectedMember.name }}</p>
-                  <p class="text-brown">Rol: {{ selectedMember.role }}</p>
-                  <p class="text-brown">Biografía: {{ selectedMember.bio }}</p>
+                  <h5 class="card-title text-dark-brown">{{ member.name }}</h5>
+                  <p class="card-text text-brown">{{ member.role }}</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-  
-        <div class="row">
-          <div class="col-md-6">
-            <div class="card bg-yellow mb-4 h-100">
+          <div *ngIf="selectedMember" class="mt-4">
+            <h3 class="text-rust">Información del Miembro</h3>
+            <div class="card bg-light-orange mb-3">
               <div class="card-body">
-                <h2 class="card-title text-dark-brown">Nuestra Historia</h2>
-                <p class="card-text text-brown">
-                  MelodyShop nació de la pasión por la música y la necesidad de ofrecer una plataforma única donde los amantes de la música puedan disfrutar de sus canciones y eventos favoritos. Desde nuestros humildes comienzos, hemos crecido para convertirnos en una de las plataformas más confiables y queridas en la industria musical.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card bg-yellow mb-4 h-100">
-              <div class="card-body">
-                <h2 class="card-title text-dark-brown">Nuestra Misión</h2>
-                <p class="card-text text-brown">
-                  Nuestra misión es proporcionar una experiencia musical incomparable a nuestros usuarios, ofreciendo una amplia gama de música y eventos en vivo que inspiran y emocionan. Nos esforzamos por mantener la calidad y la innovación en todo lo que hacemos.
-                </p>
+                <p class="text-dark-brown">Nombre: {{ selectedMember.name }}</p>
+                <p class="text-brown">Rol: {{ selectedMember.role }}</p>
+                <p class="text-rust">Biografía: {{ selectedMember.bio }}</p>
+                <p class="text-yellow">Responsibilidades: {{ selectedMember.responsibilities }}</p>
               </div>
             </div>
           </div>
         </div>
-        <br>
+      </div>
 
-        <div class="card bg-yellow mb-4">
-          <div class="card-body">
-            <h2 class="card-title text-dark-brown">Nuestros Valores</h2>
-            <ul class="list-group">
-              <li class="list-group-item text-brown bg-light-orange">Calidad: Nos comprometemos a ofrecer solo lo mejor en música y eventos.</li>
-              <li class="list-group-item text-brown bg-light-orange">Confianza: Valoramos la confianza de nuestros usuarios y trabajamos arduamente para mantenerla.</li>
-              <li class="list-group-item text-brown bg-light-orange">Innovación: Siempre buscamos nuevas formas de mejorar y evolucionar en la industria musical.</li>
-              <li class="list-group-item text-brown bg-light-orange">Servicio al Cliente: Nuestro equipo está dedicado a proporcionar el mejor servicio posible a nuestros usuarios.</li>
-            </ul>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card bg-yellow mb-4 h-100">
+            <div class="card-body">
+              <h2 class="card-title text-dark-brown">Nuestra Historia</h2>
+              <p class="card-text text-brown">
+                MelodyShop nació de la pasión por la música y la necesidad de ofrecer una plataforma única donde los amantes de la música puedan disfrutar de sus canciones y eventos favoritos. Desde nuestros humildes comienzos, hemos crecido para convertirnos en una de las plataformas más confiables y queridas en la industria musical.
+              </p>
+            </div>
           </div>
         </div>
-  
-        <div class="card bg-yellow mb-4">
-          <div class="card-body">
-            <h2 class="card-title text-dark-brown">Comentarios</h2>
-            <div>
-              <input [(ngModel)]="newComment" class="form-control mb-2" placeholder="Escribe tu comentario">
-              <button (click)="addComment()" class="btn bg-orange text-yellow">Agregar Comentario</button>
+        <div class="col-md-6">
+          <div class="card bg-yellow mb-4 h-100">
+            <div class="card-body">
+              <h2 class="card-title text-dark-brown">Nuestra Misión</h2>
+              <p class="card-text text-brown">
+                Nuestra misión es proporcionar una experiencia musical incomparable a nuestros usuarios, ofreciendo una amplia gama de música y eventos en vivo que inspiran y emocionan. Nos esforzamos por mantener la calidad y la innovación en todo lo que hacemos.
+              </p>
             </div>
-            <ul class="list-group mt-3">
-              <li *ngFor="let comment of comments" class="list-group-item text-dark-brown bg-light-orange">{{ comment }}</li>
-            </ul>
           </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="card bg-yellow mb-4">
+        <div class="card-body">
+          <h2 class="card-title text-dark-brown">Nuestros Valores</h2>
+          <ul class="list-group">
+            <li class="list-group-item text-brown bg-light-orange" (click)="playNote('piano-note1')">Calidad: Nos comprometemos a ofrecer solo lo mejor en música y eventos.</li>
+            <li class="list-group-item text-brown bg-light-orange" (click)="playNote('piano-note2')">Confianza: Valoramos la confianza de nuestros usuarios y trabajamos arduamente para mantenerla.</li>
+            <li class="list-group-item text-brown bg-light-orange" (click)="playNote('piano-note3')">Innovación: Siempre buscamos nuevas formas de mejorar y evolucionar en la industria musical.</li>
+            <li class="list-group-item text-brown bg-light-orange" (click)="playNote('piano-note4')">Servicio al Cliente: Nuestro equipo está dedicado a proporcionar el mejor servicio posible a nuestros usuarios.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card bg-yellow mb-4">
+        <div class="card-body">
+          <h2 class="card-title text-dark-brown">Comentarios</h2>
+          <div>
+            <input [(ngModel)]="newComment" class="form-control mb-2" placeholder="Escribe tu comentario">
+            <button (click)="addComment()" class="btn bg-orange text-yellow">Agregar Comentario</button>
+          </div>
+          <ul class="list-group mt-3">
+            <li *ngFor="let comment of comments" class="list-group-item text-dark-brown bg-light-orange">{{ comment }}</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

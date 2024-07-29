@@ -31,8 +31,30 @@ export class EventsComponent {
       location: 'Valencia, España', 
       description: 'Una velada íntima con los mejores músicos de jazz.',
       image: '../../events/Concierto-jazz-2024-10-05.png'
+    },
+    { 
+      name: 'Concierto de Pop', 
+      date: '2024-11-20', 
+      location: 'Sevilla, España', 
+      description: 'Un evento lleno de energía con los artistas de pop más populares.',
+      image: '../../events/Concierto-pop-2024-11-20.png'
+    },
+    { 
+      name: 'Festival de Música Clásica', 
+      date: '2024-12-05', 
+      location: 'Granada, España', 
+      description: 'Disfruta de una noche mágica con las mejores orquestas y solistas de música clásica.',
+      image: '../../events/Festival-Clasica-2024-12-05.png'
+    },
+    { 
+      name: 'Concierto de Flamenco', 
+      date: '2025-01-10', 
+      location: 'Córdoba, España', 
+      description: 'Vive una experiencia única con los mejores cantaores y guitarristas de flamenco.',
+      image: '../../events/Concierto-flamenco-2025-01-10.png'
     }
   ];
+  
 
   selectedEvent: any;
 

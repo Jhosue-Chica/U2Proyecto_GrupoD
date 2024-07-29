@@ -1,25 +1,86 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit{
+export class AboutComponent implements OnInit {
 
   teamMembers = [
-    { name: 'Juan Pérez', role: 'CEO & Fundador', bio: 'Juan es el fundador de MelodyShop y se encarga de la visión general y la estrategia de la empresa.' },
-    { name: 'María López', role: 'Directora de Marketing', bio: 'María lidera el equipo de marketing y se asegura de que MelodyShop llegue a la audiencia adecuada.' },
-    { name: 'Carlos Gómez', role: 'Gerente de Ventas', bio: 'Carlos gestiona el equipo de ventas y trabaja para incrementar las ventas y la satisfacción del cliente.' }
+    {
+      name: 'Pacheco Ramírez Nataly Marisol',
+      role: 'Front-end and UI/UX Developer',
+      bio: `Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes. 
+            Optimizar la experiencia del usuario (UX) y la interfaz de usuario (UI). 
+            Crear prototipos y diseños de alta fidelidad para la aplicación. 
+            Colaborar con otros desarrolladores frontend para implementar el diseño. 
+            Realizar pruebas de usabilidad y mejorar la experiencia del usuario. 
+            Definir guías de estilo y asegurarse de que se sigan.`,
+      responsibilities: [
+        'Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes.',
+        'Optimizar la experiencia del usuario (UX) y la interfaz de usuario (UI).',
+        'Crear prototipos y diseños de alta fidelidad para la aplicación.',
+        'Colaborar con otros desarrolladores frontend para implementar el diseño.',
+        'Realizar pruebas de usabilidad y mejorar la experiencia del usuario.',
+        'Definir guías de estilo y asegurarse de que se sigan.'
+      ]
+    },
+    {
+      name: 'Chica Peñarrieta Jhosue Israel',
+      role: 'Backend Developer and Angular Architect',
+      bio: `Definir la arquitectura de la aplicación Angular. 
+            Establecer las mejores prácticas y estándares de codificación. 
+            Tomar decisiones de alto nivel sobre la estructura y el diseño del sistema. 
+            Supervisar el desarrollo del proyecto y garantizar su calidad. 
+            Diseñar y desarrollar la lógica del servidor y la base de datos. 
+            Crear y mantener APIs para ser consumidas por la aplicación Angular. 
+            Asegurar la seguridad y el rendimiento del backend. 
+            Integrar servicios externos y bibliotecas de terceros.`,
+      responsibilities: [
+        'Definir la arquitectura de la aplicación Angular.',
+        'Establecer las mejores prácticas y estándares de codificación.',
+        'Tomar decisiones de alto nivel sobre la estructura y el diseño del sistema.',
+        'Supervisar el desarrollo del proyecto y garantizar su calidad.',
+        'Diseñar y desarrollar la lógica del servidor y la base de datos.',
+        'Crear y mantener APIs para ser consumidas por la aplicación Angular.',
+        'Asegurar la seguridad y el rendimiento del backend.',
+        'Integrar servicios externos y bibliotecas de terceros.'
+      ]
+    },
+    {
+      name: 'Faz Intriago Raúl Enrique',
+      role: 'Full-stack Developer',
+      bio: `Desarrollar y mantener componentes de UI utilizando Angular. 
+            Implementar data binding, directivas y pipes. 
+            Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes. 
+            Optimizar la experiencia del usuario (UX) y la interfaz de usuario (UI). 
+            Desarrollar tanto el frontend en Angular como el backend en tecnologías como Node.js, .NET, Java, etc. 
+            Diseñar y desarrollar APIs RESTful. 
+            Integrar el frontend con el backend y manejar la comunicación entre ambos. 
+            Gestionar la base de datos y la lógica de negocio en el backend.`,
+      responsibilities: [
+        'Desarrollar y mantener componentes de UI utilizando Angular.',
+        'Implementar data binding, directivas y pipes.',
+        'Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes.',
+        'Optimizar la experiencia del usuario (UX) y la interfaz de usuario (UI).',
+        'Desarrollar tanto el frontend en Angular como el backend en tecnologías como Node.js, .NET, Java, etc.',
+        'Diseñar y desarrollar APIs RESTful.',
+        'Integrar el frontend con el backend y manejar la comunicación entre ambos.',
+        'Gestionar la base de datos y la lógica de negocio en el backend.'
+      ]
+    }
   ];
+  
 
   selectedMember: any;
   newComment: string = '';
   comments: string[] = [];
+  audio = new Audio();
 
   constructor() { }
 
@@ -35,5 +96,11 @@ export class AboutComponent implements OnInit{
       this.comments.push(this.newComment);
       this.newComment = '';
     }
+  }
+
+  playNote(note: string): void {
+    this.audio.src = `../../about/${note}.mp3`;
+    this.audio.load();
+    this.audio.play();
   }
 }
