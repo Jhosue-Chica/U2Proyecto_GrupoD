@@ -46,6 +46,12 @@ body {
     background-color: var(--color-light-orange);
   }
 
+
+
   .bg-yellow {
-    background-color: var(--color-yellow);
+    background-color: #ffe39c;
+  }
+
+  .bg-yellow2 {
+    background-color: #ffcf9c;
   }
