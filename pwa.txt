@@ -1,0 +1,5 @@
+ng add @angular/pwa
+
+ng build
+npx http-server -p 8080 -c-1 dist/u2-proyecto-grupo-d/browser
+http://localhost:8080
