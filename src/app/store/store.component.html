@@ -1,2 +1,63 @@
-<h1>Store</h1>
-<p>Bienvenido a la tienda</p>
+<div class="banner text-center p-2">
+    <h5>
+        <strong>
+            <span>OFERTA DEL 30% EN TODOS LOS PRODUCTOS</span>
+        </strong>
+    </h5>
+</div>
+<div class="poster p-4">
+    <div class="row">
+        <div class="col-lg-7 col-md-12 percusion">
+            <img src="../../img_store/percusion-removebg-preview.png" alt="" width="70%" class="img-fluid">
+        </div>
+        <div class="col-lg-5 col-md-12">
+            <div class="row cuerda">
+                <div class="col-6">
+                    <img src="../../img_store/Instrumentos_cuerda.png" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="space-3px"></div>
+            <div class="row viento">
+                <div class="col-6">
+                    <img src="../../img_store/instrumentos_viento.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class=" text-center p-4 ">
+        <h3 >
+            <strong>
+            <span style="color: rgb(105, 20, 14);">Los Mejores Instrumentos</span>
+            </strong>
+        </h3>
+        </div>
+        <div class="product-grid">
+        <mat-card class="product-card" *ngFor="let product of products">
+            <img mat-card-image [src]="product.image" [alt]="product.name">
+            <mat-card-content>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <p><strong>Precio: </strong>{{ product.price }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+            <button mat-button color="primary" (click)="addToCart(product)">Añadir al carrito!!</button>
+            <button mat-button color="warn" (click)="buyNow(product)">Comprar!!!</button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+    </div>
+    <div class="final p-4 ">
+        <div class="row container">
+            <div class="col-md-8">
+                <p class="text-white">Entra al grupo VIP y conoce los próximos modelos antes que nadie</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <button class="btn btn-light">Solicitar invitación</button>
+            </div>
+        </div>
+    </div>
+
+
+

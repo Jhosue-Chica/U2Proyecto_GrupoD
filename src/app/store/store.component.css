@@ -1,0 +1,125 @@
+
+.banner {
+    background-color: rgb(164, 66, 0);
+    color: white;
+    justify-content: center;
+}
+
+.poster {
+    background-color: rgb(254, 186, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.percusion {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+@media screen and (max-width: 768px) {
+    .percusion {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cuerda {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .viento {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-40%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.percusion {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.cuerda {
+    animation: slideInFromRight 1s ease-out;
+}
+
+.viento {
+    animation: slideInFromRight 1s ease-out;
+}
+
+
+.space-3px {
+    width: 100%;
+    height: 3px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+mat-card-content {
+    flex-grow: 1;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.final {
+    background-image: url("/../../img_store/banner.png");
+}
