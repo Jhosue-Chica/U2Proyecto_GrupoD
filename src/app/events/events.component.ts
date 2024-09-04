@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EventDialogComponent } from '../event-dialog/event-dialog.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-events',
@@ -19,6 +21,8 @@ import { EventDialogComponent } from '../event-dialog/event-dialog.component';
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
+
+
 export class EventsComponent {
   upcomingEvents = [
     { 
@@ -67,7 +71,7 @@ export class EventsComponent {
   
   selectedEvent: any;
 
-  constructor(private dialog: MatDialog) { } // Injectamos MatDialog en el constructor
+  constructor(private dialog: MatDialog, private router: Router) { }
 
   openEventDetails(event: any): void {
     this.selectedEvent = event;
@@ -75,4 +79,9 @@ export class EventsComponent {
       data: { event: this.selectedEvent }
     });
   }
+
+  navigateToOtraPagina() {
+    this.router.navigate(['/store']); 
+  }
+
 }

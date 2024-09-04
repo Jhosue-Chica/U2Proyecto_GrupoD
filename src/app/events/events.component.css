@@ -1,17 +1,138 @@
-.btn-custom {
-    background-color: #4b2121;
-    color: #f19a1a;
-    border: none;
+/* Estilos para el banner */
+.banner-container {
+    position: relative;
+    background-image: url('https://www.elcomercio.com/wp-content/uploads/2022/11/24-700x391.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.btn-custom:hover {
-    background-color: #f19a1a;
-    color: #4b2121;
+.banner-content {
+    max-width: 600px;
 }
 
-.btn-cerrar-modal {
-    background-color: #4b2121;
-    color: #f19a1a;
-    border: none;
+.banner-content h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
+.banner-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.banner-content button {
+    background-color: #FF7E44;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección de eventos */
+.container {
+    margin-top: 50px;
+}
+
+.text-dark-brown {
+    color: #4E342E;
+}
+
+.bg-light-orange {
+    background-color: #FFE0B2;
+}
+
+.mat-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mat-card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.mat-card-content {
+    color: #6C5B7B;
+}
+
+.mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mat-card-actions button {
+    background-color: #8B4513;
+    color: white;
+}
+
+/* Estilos para la sección personalizada */
+.custom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F7F7F7;
+}
+
+.custom-section-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.custom-section-text h2 {
+    color: #AF5F0C;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.custom-section-text p {
+    color: #6C5B7B;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.custom-section-text button {
+    background-color: #8B4513;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.custom-section-images {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-section-images img {
+    max-width: 30%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.custom-section-images img:hover {
+    transform: scale(1.05);
+}
