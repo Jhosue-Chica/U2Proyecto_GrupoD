@@ -106,43 +106,40 @@
 }
 
 
+/* Estilos CSS */
 
-
-/* Mat Grid List */
-mat-grid-list {
+/* Contenedor principal usando CSS Grid */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px; /* Espacio entre columnas */
   width: 100%;
-  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Columnas dentro del Grid */
-mat-grid-tile {
-  padding: 300px; /* Espaciado interno opcional */
-
+.left-content,
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Imagen en la columna izquierda */
 .left-image {
   border-radius: 10px;
   width: 70%;
-  height: auto /* Mantiene las proporciones de la imagen */;
-margin-left: 150px;
+  height: auto;
 }
 
-
-/* Contenido en la columna derecha */
 .right-content {
-  display: flex;
-  width: 70%;
-  flex-direction: column;
-  justify-content: right;
+  justify-content: flex-start;
   align-items: flex-start;
-  margin-right: 150px;
-
 }
 
 .right-content h2 {
   font-size: 35px;
-  color: #69140e
+  color: #69140e;
 }
 
 .right-content h3 {
@@ -159,8 +156,43 @@ margin-left: 150px;
 
 .right-content .right-image {
   width: 100%;
-  height: auto; /* Mantiene las proporciones de la imagen */
-  border-radius: 10px; /* Opcional: redondea las esquinas de la imagen */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+        display: none;
+
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-content {
+    margin-top: 20px;
+  }
+
+  .right-content h2 {
+    font-size: 28px;
+  }
+
+  .right-content h3 {
+    font-size: 20px;
+  }
+
+  .right-content p {
+    font-size: 14px;
+  }
+
+  .right-content .right-image {
+    width: 90%;
+  }
 }
 
 
@@ -233,7 +265,8 @@ body, html {
 }
 
 /* Para un padding más consistente */
-.container {
+.container-form {
+  
   padding-left: 15px;
   padding-right: 15px;
 }
