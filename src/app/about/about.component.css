@@ -1,57 +1,152 @@
 body {
-    font-family:  Tahoma, sans-serif;
-  }
+  font-family: Tahoma, sans-serif;
+}
 
-  .text-dark-brown {
-    color: var(--color-dark-brown);
-  }
-
-  .text-brown {
-    color: var(--color-brown);
-  }
-
-  .text-rust {
-    color: var(--color-rust);
-  }
-
-  .text-orange {
-    color: var(--color-orange);
-  }
-
-  .text-light-orange {
-    color: var(--color-light-orange);
-  }
-
-  .text-yellow {
-    color: var(--color-yellow);
-  }
-
-  .bg-dark-brown {
-    background-color: var(--color-dark-brown);
-  }
-
-  .bg-brown {
-    background-color: var(--color-brown);
-  }
-
-  .bg-rust {
-    background-color: var(--color-rust);
-  }
-
-  .bg-orange {
-    background-color: var(--color-orange);
-  }
-
-  .bg-light-orange {
-    background-color: var(--color-light-orange);
-  }
+.hero-section {
+  background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-an-acoustic-guitar-sitting-on-a-dark-picture-image_2653487.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
 
 
+.text-dark-brown {
+  color: var(--color-dark-brown);
+}
 
-  .bg-yellow {
-    background-color: #ffe39c;
-  }
+.text-brown {
+  color: var(--color-brown);
+}
 
-  .bg-yellow2 {
-    background-color: #ffcf9c;
-  }
+.text-rust {
+  color: var(--color-rust);
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.text-light-orange {
+  color: var(--color-light-orange);
+}
+
+.text-yellow {
+  color: var(--color-yellow);
+}
+
+.bg-dark-brown {
+  background-color: var(--color-dark-brown);
+}
+
+.bg-brown {
+  background-color: var(--color-brown);
+}
+
+.bg-rust {
+  background-color: var(--color-rust);
+}
+
+.bg-orange {
+  background-color: var(--color-orange);
+}
+
+.bg-light-orange {
+  background-color: var(--color-light-orange);
+}
+
+
+
+.bg-yellow {
+  background-color: #ffe39c;
+}
+
+.bg-yellow2 {
+  background-color: #ffcf9c;
+}
+
+
+
+.about-container {
+  background-color: #FFE9B3;
+  /* Color de fondo similar al amarillo pálido */
+  border-radius: 12px;
+  /* Bordes redondeados */
+  padding: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+  /* Ajusta el ancho según sea necesario */
+}
+
+.about-title {
+  font-size: 2rem;
+  color: #6C1A17;
+  /* Color marrón similar al texto del título */
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.about-content {
+  font-size: 1rem;
+  color: #3A2718;
+  /* Color marrón para el texto del párrafo */
+  text-align: center;
+  line-height: 1.5;
+}
+
+.about-content strong {
+  font-weight: bold;
+}
+
+.mission-section {
+  padding: 24px;
+  margin: 20px auto;
+  max-width: 1000px;
+  display: flex;
+}
+
+.mission-image {
+  width: 100%;
+  height: auto;
+  max-width: 300em;
+  border-radius: 8px;
+}
+
+
+.mission-text {
+  padding-left: 24px;
+  width: 40%;
+}
+
+.mission-title {
+  font-size: 2rem;
+  color: #6C1A17;
+  margin-bottom: 16px;
+}
+
+.mission-text p {
+  font-size: 1rem;
+  color: #3A2718;
+  line-height: 1.5;
+}
+
+mat-panel-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 1em;
+}
+
+mat-expansion-panel img{
+  width: 50%;
+  height: auto;
+  max-width: 300em;
+  border-radius: 8px;
+  
+}

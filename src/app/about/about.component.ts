@@ -1,11 +1,24 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatListModule,
+    MatExpansionModule
+  ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
@@ -15,6 +28,7 @@ export class AboutComponent implements OnInit {
     {
       name: 'Pacheco Ramírez Nataly Marisol',
       role: 'Front-end and UI/UX Developer',
+      img: '/about/nataly.jpg',
       bio: `Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes. 
             Optimizar la experiencia del usuario (UX) y la interfaz de usuario (UI). 
             Crear prototipos y diseños de alta fidelidad para la aplicación. 
@@ -33,6 +47,7 @@ export class AboutComponent implements OnInit {
     {
       name: 'Chica Peñarrieta Jhosue Israel',
       role: 'Backend Developer and Angular Architect',
+      img: '/about/jhosue.jpg',
       bio: `Definir la arquitectura de la aplicación Angular. 
             Establecer las mejores prácticas y estándares de codificación. 
             Tomar decisiones de alto nivel sobre la estructura y el diseño del sistema. 
@@ -55,6 +70,7 @@ export class AboutComponent implements OnInit {
     {
       name: 'Faz Intriago Raúl Enrique',
       role: 'Full-stack Developer',
+      img: '/about/raul.jpg',
       bio: `Desarrollar y mantener componentes de UI utilizando Angular. 
             Implementar data binding, directivas y pipes. 
             Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes. 
@@ -86,6 +102,14 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  values = [
+    { text: 'Calidad: Nos comprometemos a ofrecer solo lo mejor en música y eventos.', note: 'piano-note1' },
+    { text: 'Confianza: Valoramos la confianza de nuestros usuarios y trabajamos arduamente para mantenerla.', note: 'piano-note2' },
+    { text: 'Innovación: Siempre buscamos nuevas formas de mejorar y evolucionar en la industria musical.', note: 'piano-note3' },
+    { text: 'Servicio al Cliente: Nuestro equipo está dedicado a proporcionar el mejor servicio posible a nuestros usuarios.', note: 'piano-note4' }
+  ];
+  
 
   selectMember(member: any): void {
     this.selectedMember = member;
