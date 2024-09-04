@@ -21,45 +21,42 @@
 
 <mat-card class="container mt-5">
   <mat-card-title>
-    <h1 class="text-dark-brown">About Us</h1>
+    <h1 class="text-dark-brown">Nosotros</h1>
   </mat-card-title>
   <mat-card-content>
 
     <!-- Nuestro Equipo -->
     <mat-card class="bg-yellow2 mb-4">
-      <mat-card-header>
-        <h2 class="mat-card-title text-dark-brown">Nuestro Equipo</h2>
-      </mat-card-header>
       <mat-card-content>
+        <h2 class="mat-card-title text-dark-brown">Nuestro Equipo</h2>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="24px">
-          <mat-expansion-panel *ngFor="let member of teamMembers" (opened)="selectMember(member)"
-            class="bg-light-orange mb-3">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                <h5 class="mat-card-title text-dark-brown">{{ member.name }}</h5>
-              </mat-panel-title>
-              <mat-panel-description class="text-brown">
-                {{ member.role }}
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <img [src]="member.img" alt="{{ member.name }}" class="team-member-image">
-          </mat-expansion-panel>
+          <mat-card *ngFor="let member of teamMembers" class="bg-light-orange mb-3" (click)="selectMember(member)">
+            <mat-card-content>
+              <h5 class="mat-card-title text-dark-brown">{{ member.name }}</h5>
+              <p class="text-brown">{{ member.role }}</p>
+            </mat-card-content>
+          </mat-card>
         </div>
-
         <div *ngIf="selectedMember" class="mt-4">
           <h3 class="text-rust">Información del Miembro</h3>
-          <mat-expansion-panel class="bg-yellow mb-3" expanded="true">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Detalles de {{ selectedMember.name }}
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <p class="text-dark-brown">Nombre: {{ selectedMember.name }}</p>
-            <p class="text-brown">Rol: {{ selectedMember.role }}</p>
-            <p class="text-brown">Biografía: {{ selectedMember.bio }}</p>
-            <p class="text-brown">Responsibilidades: {{ selectedMember.responsibilities }}</p>
-          </mat-expansion-panel>
+          <mat-card class="bg-yellow mb-3">
+            <mat-card-content>
+              <div class="member-info-container">
+                <div class="member-info">
+                  <p class="text-dark-brown">Nombre: {{ selectedMember.name }}</p>
+                  <p class="text-brown">Rol: {{ selectedMember.role }}</p>
+                  <p class="text-brown">Biografía: {{ selectedMember.bio }}</p>
+                  <p class="text-brown">Responsibilidades: {{ selectedMember.responsibilities }}</p>
+                  <p class="text-brown">Contacto: {{ selectedMember.contact }}</p>
+                </div>
+                <div class="member-image">
+                  <img [src]="selectedMember.img" alt="Miembro del Equipo" class="team-member-image">
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
         </div>
+
       </mat-card-content>
     </mat-card>
 
@@ -75,21 +72,30 @@
           amplia gama de música y eventos en vivo que inspiran y emocionan. Nos esforzamos por mantener la calidad y
           la innovación en todo lo que hacemos.
         </p>
+        <h2 class="mission-title">Visión</h2>
+        <p>
+          Convertirnos en el epicentro de la comunidad musical, donde artistas y amantes de la música se conectan,
+          comparten y celebran la pasión por la música en un ambiente vibrante e inclusivo.
+        </p>
       </div>
     </div>
 
-    <div fxLayout="row" fxLayoutGap="24px">
-      <mat-card class="bg-yellow mb-4 h-100">
-        <mat-card-content>
-          <h2 class="mat-card-title text-dark-brown">Nuestra Historia</h2>
-          <p class="text-brown">
-            MelodyShop nació de la pasión por la música y la necesidad de ofrecer una plataforma única donde los amantes
-            de la música puedan disfrutar de sus canciones y eventos favoritos. Desde nuestros humildes comienzos, hemos
-            crecido para convertirnos en una de las plataformas más confiables y queridas en la industria musical.
-          </p>
-        </mat-card-content>
-      </mat-card>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mission-section">
+
+      <div fxFlex="50" class="mission-text">
+        <h2 class="mission-title">Historia</h2>
+        <p>
+          MelodyShop nació de la pasión por la música y la necesidad de ofrecer una plataforma única donde los amantes
+          de la música puedan disfrutar de sus canciones y eventos favoritos. Desde nuestros humildes comienzos, hemos
+          crecido para convertirnos en una de las plataformas más confiables y queridas en la industria musical.
+        </p>
+      </div>
+      <div fxFlex="50">
+        <img src="/about/historia.png" alt="Misión" class="mission-image">
+      </div>
     </div>
+
+
 
     <!-- Nuestros Valores -->
     <mat-card class="bg-yellow2 mb-4">
@@ -109,7 +115,7 @@
         <h2 class="mat-card-title text-dark-brown">Comentarios</h2>
         <div>
           <mat-form-field appearance="fill" class="w-100">
-            <mat-label>Escribe tu comentario</mat-label>
+            <mat-label >Escribe tu comentario</mat-label>
             <input matInput [(ngModel)]="newComment">
           </mat-form-field>
           <button mat-raised-button color="primary" (click)="addComment()">Agregar Comentario</button>

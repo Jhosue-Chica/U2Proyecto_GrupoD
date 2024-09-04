@@ -29,6 +29,7 @@ export class AboutComponent implements OnInit {
       name: 'Pacheco Ramírez Nataly Marisol',
       role: 'Front-end and UI/UX Developer',
       img: '/about/nataly.jpg',
+      contact: 'nmpacheco1@espe.edu.ec',
       bio: `Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes. 
             Optimizar la experiencia del usuario (UX) y la interfaz de usuario (UI). 
             Crear prototipos y diseños de alta fidelidad para la aplicación. 
@@ -48,6 +49,7 @@ export class AboutComponent implements OnInit {
       name: 'Chica Peñarrieta Jhosue Israel',
       role: 'Backend Developer and Angular Architect',
       img: '/about/jhosue.jpg',
+      contact: 'jichica@espe.edu.ec',
       bio: `Definir la arquitectura de la aplicación Angular. 
             Establecer las mejores prácticas y estándares de codificación. 
             Tomar decisiones de alto nivel sobre la estructura y el diseño del sistema. 
@@ -71,6 +73,7 @@ export class AboutComponent implements OnInit {
       name: 'Faz Intriago Raúl Enrique',
       role: 'Full-stack Developer',
       img: '/about/raul.jpg',
+      contact: 'refaz@espe.edu.ec',
       bio: `Desarrollar y mantener componentes de UI utilizando Angular. 
             Implementar data binding, directivas y pipes. 
             Trabajar con CSS y preprocesadores como SASS o LESS para estilizar componentes. 
@@ -94,14 +97,9 @@ export class AboutComponent implements OnInit {
   
 
   selectedMember: any;
-  newComment: string = '';
-  comments: string[] = [];
   audio = new Audio();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   values = [
     { text: 'Calidad: Nos comprometemos a ofrecer solo lo mejor en música y eventos.', note: 'piano-note1' },
@@ -112,13 +110,35 @@ export class AboutComponent implements OnInit {
   
 
   selectMember(member: any): void {
-    this.selectedMember = member;
+    if (this.selectedMember === member) {
+      this.selectedMember = null;
+    } else {
+      this.selectedMember = member; 
+    }
+  }
+  newComment: string = '';
+  comments: string[] = [];
+
+  ngOnInit(): void {
+    this.loadComments();
   }
 
   addComment(): void {
-    if (this.newComment) {
-      this.comments.push(this.newComment);
+    if (this.newComment.trim()) {
+      this.comments.push(this.newComment.trim());
+      this.saveComments();
       this.newComment = '';
+    }
+  }
+
+  saveComments(): void {
+    localStorage.setItem('comments', JSON.stringify(this.comments));
+  }
+
+  loadComments(): void {
+    const storedComments = localStorage.getItem('comments');
+    if (storedComments) {
+      this.comments = JSON.parse(storedComments);
     }
   }
 

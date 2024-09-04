@@ -134,6 +134,7 @@ body {
   font-size: 1rem;
   color: #3A2718;
   line-height: 1.5;
+  padding-right: 10px;
 }
 
 mat-panel-title{
@@ -143,10 +144,66 @@ mat-panel-title{
   padding-top: 1em;
 }
 
-mat-expansion-panel img{
-  width: 50%;
+
+
+.bg-light-orange:hover {
+  cursor: pointer;
+}
+
+.member-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-info {
+  margin-right: 1px;
+}
+
+.team-member-image {
+  max-width: 300px;
   height: auto;
-  max-width: 300em;
-  border-radius: 8px;
-  
+}
+
+.hero-content, .about-container, .mission-section, .bg-yellow, .bg-yellow2 {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.about-container, .mission-section, .bg-yellow, .bg-yellow2 {
+  transform: translateY(50px);
+  animation: slideUp 0.5s ease-in-out forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+.bg-light-orange:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button[mat-raised-button]:hover {
+  transform: scale(1.1);
+  background-color: #ff8f17;
+  color: white;
+}
+
+.member-info-container {
+  transform: translateX(100%);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
