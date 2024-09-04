@@ -1,5 +1,5 @@
 .Carrito-vacio{
-    font-size: 150px;
+    font-size: 100px;
 }
 
 .product-grid {
@@ -41,3 +41,44 @@ mat-card-actions {
         grid-template-columns: 1fr;
     }
 }
+.button {
+    display: inline-block;
+    /*padding: 5px 15px;*/
+    padding: 12px; /* Ajusta el tamaño del botón según tus necesidades */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Hace que los bordes sean redondeados */
+    text-align: center;
+    border: 2px solid transparent;
+}
+.button.carrito{
+    background-color: rgb(254, 186, 83);
+}
+.boton {
+    display: inline-block;
+    /*padding: 5px 15px;*/
+    padding: 12px; /* Ajusta el tamaño del botón según tus necesidades */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px; /* Hace que los bordes sean redondeados */
+    text-align: center;
+    border: 2px solid transparent;
+}
+.boton.icon-button{
+    background-color: rgb(239, 239, 245);
+    color: white;
+}
+.icon-button {
+   
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin padding */
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+    text-decoration: none;
+  }
+  
+  .icon-img {
+    width: 34px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 34px; /* Ajusta el tamaño del icono según sea necesario */
+  }
+  
