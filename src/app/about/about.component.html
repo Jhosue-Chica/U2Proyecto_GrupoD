@@ -122,8 +122,11 @@
           <button mat-raised-button color="primary" (click)="addComment()">Agregar Comentario</button>
         </div>
         <mat-list class="mt-3">
-          <mat-list-item class="bg-light-orange text-dark-brown" *ngFor="let comment of comments">
+          <mat-list-item class="bg-light-orange text-dark-brown" *ngFor="let comment of comments; let i = index"> 
             {{ comment }}
+            <button mat-icon-button color="warn" (click)="deleteComment(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
           </mat-list-item>
         </mat-list>
       </mat-card-content>

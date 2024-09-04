@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-about',
@@ -17,7 +18,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatButtonModule,
     MatInputModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatIconModule
   ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
@@ -140,6 +142,11 @@ export class AboutComponent implements OnInit {
     if (storedComments) {
       this.comments = JSON.parse(storedComments);
     }
+  }
+
+  deleteComment(index: number) {
+    this.comments.splice(index, 1);
+    this.saveComments();
   }
 
   playNote(note: string): void {
