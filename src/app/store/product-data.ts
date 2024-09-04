@@ -10,19 +10,19 @@ export interface Product {
 export const PRODUCTS: Product[] = [
     {
         name: 'Guitarra Acústica Yamaha FG800',
-        description: 'La Yamaha FG800 es una guitarra acústica ideal para principiantes y músicos intermedios.',
+        description: 'La Yamaha FG800 es una guitarra acústica ideal ​para principiantes y músicos intermedios. Tiene un ​tono cálido y resonante gracias a su tapa de abeto ​macizo y su fondo y aros de nato/okume.',
         price: '$200',
         image: '../../img_store/Guitarra Acústica.webp'
     },
     {
         name: 'Teclado Electrónico Casio CT-S300',
-        description: 'Un teclado portátil de 61 teclas con sensibilidad al tacto. Ofrece 400 tonos, 77 ritmos.',
+        description: 'Un teclado portátil de 61 teclas con sensibilidad al ​tacto. Ofrece 400 tonos, 77 ritmos y una amplia ​variedad de funciones educativas. Perfecto para ​estudiantes y músicos en movimiento.',
         price: '$150',
         image: '../../img_store/Teclado.png'
     },
     {
         name: 'Saxofón Alto Yamaha YAS-280',
-        description: 'Este saxofón alto es conocido por su calidad de construcción y sonido.',
+        description: 'Este saxofón alto es conocido por su calidad de ​construcción y sonido. Ideal para estudiantes ​avanzados y músicos intermedios, cuenta con una ​entonación precisa y facilidad de ejecución.',
         price: '$1200',
         image: '../../img_store/Saxofon.webp'
     },
