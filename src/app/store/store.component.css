@@ -184,5 +184,7 @@ mat-card-actions {
     background-color: #8B0000; /* Cambia ligeramente el color al pasar el cursor */
     text-decoration: underline; /* Subraya el texto al pasar el cursor */
 }
-
+.button.carrito{
+    background-color: rgb(254, 186, 83);
+}
 

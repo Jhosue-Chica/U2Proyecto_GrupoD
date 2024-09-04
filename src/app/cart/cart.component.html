@@ -1,20 +1,36 @@
+
 <div class="container">
     <mat-card *ngIf="items.length === 0">
-        <div class="Carrito-vacio">
+        <div class="Carrito-vacio text-center">
             <span>Tu carrito está vacío.</span>
             <span>Comienza a comprar ya</span>
         </div>
     </mat-card>
-    <a routerLink="/store">Ir a la Tienda</a>
+    <br><br>
+    <div class="text-center">
+        <button class="button carrito">
+            <a class="nav-link text-dark-brown" routerLink="/store" style="color: black;">Ir a la tienda</a>
+        </button>
+    </div>
+    <br><br>
     <div class="product-grid">
         <mat-card class="product-card" *ngFor="let item of items">
             <img mat-card-image [src]="item.image" [alt]="item.name">
             <mat-card-content>
                 <h3>{{ item.name }}</h3>
                 <p>{{ item.description }}</p>
-                <p><strong>Precio: </strong>{{ item.price }}</p>
+                <p><strong>Precio: $ </strong>{{ item.price }}</p>
             </mat-card-content>
         </mat-card>
     </div>
+    <div class="text-center">
+        <h1>Total Price: {{ getTotalPrice() | currency }}</h1>
+        <button class="boton icon-button p-3">
+            <img src="../../img_store/paypal.webp" alt="Icon" class="icon-img">
+            <a href="https://www.paypal.com/signin"  style="text-decoration: none;">Pagar</a>
+        </button>
+    </div>
+      
+
     <button mat-raised-button color="warn" *ngIf="items.length > 0" (click)="clearCart()">Vaciar Carrito</button>
 </div>

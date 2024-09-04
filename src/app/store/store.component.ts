@@ -9,6 +9,7 @@ import { CartComponent } from '../cart/cart.component';
 import { RouterModule } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-store',
   standalone: true,

@@ -39,7 +39,7 @@
             <mat-card-content>
             <h3>{{ product.name }}</h3>
             <p>{{ product.description }}</p>
-            <p><strong>Precio: </strong>{{ product.price }}</p>
+            <p><strong>Precio: </strong>$ {{ product.price }}</p>
             </mat-card-content>
             <mat-card-actions>
                 <div class="button-container">
@@ -50,8 +50,12 @@
         </mat-card>
         </div>
     </div>
-    <b><a class="nav-link text-dark-brown" routerLink="/cart" style="color: #69140e;">Ir al carrito</a></b>
-
+    <div class="text-center">
+        <button class="button carrito">
+            <a class="nav-link text-dark-brown" routerLink="/cart" style="color: black;">Ir al carrito</a>
+        </button>
+    </div>
+<br><br>
     <div class="banner-container">
         <div class="banner-content">
             <div class="row">
