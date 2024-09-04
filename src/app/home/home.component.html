@@ -39,8 +39,22 @@
       <img src="../../img_home/comunicate.png" alt="Descripción de la imagen derecha" class="right-image">
     </div>
   </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list><br><br><br><br><br>
 <div class="empty-section"></div>
+
+
+<div class="services-section">
+  <h2><b>NUESTROS SERVICIOS</b></h2>
+  <div class="services">
+    <div class="service-card" *ngFor="let service of services">
+      <div class="icon">
+        <i class="fas fa-lightbulb"></i>
+      </div>
+      <h3>{{service.title}}</h3>
+      <p>{{service.description}}</p>
+    </div>
+  </div>
+</div>
 
 
 

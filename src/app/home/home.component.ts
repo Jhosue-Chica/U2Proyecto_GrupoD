@@ -30,4 +30,11 @@ export class HomeComponent {
       content: 'Nos esforzamos siempre, incorporando los últimos avances en tecnología musical y ofreciendo productos y servicios únicos para satisfacer las necesidades.',
     }
   ];
+
+  services = [
+    { title: 'Asesoría', description: 'Ofrecemos un servicio de asesoría personalizada para ayudarte a elegir el instrumento musical que mejor se adapte a tus necesidades.' },
+    { title: 'Reparación', description: 'Proporcionamos servicios completos de reparación y mantenimiento para todos los tipos de instrumentos musicales.' },
+    { title: 'Clases', description: 'Ofrecemos clases de música para una variedad de instrumentos, incluyendo guitarra, piano, batería, y muchos más.' },
+    { title: 'Venta', description: 'Disponemos de una amplia gama de accesorios y equipos de sonido para complementar tu instrumento musical de cualquier marca.' },
+  ];
 }
