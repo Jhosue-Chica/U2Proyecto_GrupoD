@@ -4,6 +4,7 @@ import { StoreComponent } from './store/store.component';
 import { SongsComponent } from './songs/songs.component';
 import { EventsComponent } from './events/events.component';
 import { AboutComponent } from './about/about.component';
+import { CartComponent } from './cart/cart.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'store', component: StoreComponent },
     { path: 'songs', component: SongsComponent },
     { path: 'events', component: EventsComponent },
-    { path: 'about', component: AboutComponent }
+    { path: 'about', component: AboutComponent },
+    { path: 'cart', component: CartComponent }
 ];

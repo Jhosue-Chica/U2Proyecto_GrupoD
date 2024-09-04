@@ -1,0 +1,43 @@
+.Carrito-vacio{
+    font-size: 150px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card img {
+    object-fit: cover;
+    height: 200px;
+}
+
+mat-card-content {
+    flex-grow: 1;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}

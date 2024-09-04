@@ -104,7 +104,7 @@ mat-card-content {
 
 mat-card-actions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 8px;
 }
 
@@ -120,6 +120,69 @@ mat-card-actions {
     }
 }
 
-.final {
+.banner-container {
     background-image: url("/../../img_store/banner.png");
+    background-size: cover;
+    background-position: center;
+    height: 130px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white; /* Color del texto */
 }
+
+
+.banner-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px; /* Ajusta el tamaño de la fuente según tus necesidades */
+}
+
+.banner-content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white; /* Color del botón */
+    color: black;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.button-container {
+    display: flex;
+    gap: 30px; /* Espacio entre los botones */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button {
+    display: inline-block;
+    /*padding: 5px 15px;*/
+    padding: 12px; /* Ajusta el tamaño del botón según tus necesidades */
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Hace que los bordes sean redondeados */
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.button.yellow {
+    background-color: #FFFF88; /* Color amarillo del botón */
+    color: black;
+}
+
+.button.yellow:hover {
+    background-color: #FFEB3B; /* Cambia ligeramente el color al pasar el cursor */
+    text-decoration: underline; /* Subraya el texto al pasar el cursor */
+}
+
+.button.red {
+    background-color: #641616; /* Color rojo oscuro del botón */
+    color: white;
+}
+
+.button.red:hover {
+    background-color: #8B0000; /* Cambia ligeramente el color al pasar el cursor */
+    text-decoration: underline; /* Subraya el texto al pasar el cursor */
+}
+
+

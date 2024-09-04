@@ -221,6 +221,22 @@ margin-left: 150px;
 
 
 
+/* Asegúrate de que no haya desbordamiento horizontal */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Para asegurar que las imágenes no causen desbordamiento */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Para un padding más consistente */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
 
 
