@@ -88,4 +88,7 @@ export class EventsComponent {
     this.router.navigate(['/home']); 
   }
 
+  url: string = 'https://api.whatsapp.com/send?phone=593986439931&text=Hola%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20vivero%F0%9F%98%8A';
+
+
 }

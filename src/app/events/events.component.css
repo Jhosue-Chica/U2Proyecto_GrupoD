@@ -42,7 +42,10 @@
     border-radius: 5px;
 }
 
-/* Estilos para la sección de eventos */
+.banner-content button a {
+    color: white;
+}
+
 .container {
     margin-top: 50px;
 }
@@ -85,7 +88,6 @@
     color: white;
 }
 
-/* Estilos para la sección personalizada */
 .custom-section {
     display: flex;
     justify-content: space-between;
@@ -137,7 +139,6 @@
     transform: scale(1.05);
 }
 
-/* Fade in */
 .banner-content h1,
 .banner-content p,
 h1.text-dark-brown,
@@ -156,7 +157,6 @@ h1.text-dark-brown,
     }
 }
 
-/* Slide up */
 .mat-card {
     transform: translateY(30px);
     opacity: 0;
@@ -187,17 +187,14 @@ h1.text-dark-brown,
     }
 }
 
-/* Hover en las tarjetas */
 .mat-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover y pulsación en botones */
 button[mat-raised-button]:hover {
     transform: scale(1.1);
     background-color: darken(#f06292, 10%);
-    /* Ejemplo con color accent más oscuro */
 }
 
 button[mat-raised-button]:active {
