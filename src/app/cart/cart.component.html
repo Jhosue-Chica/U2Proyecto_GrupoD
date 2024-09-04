@@ -1,0 +1,20 @@
+<div class="container">
+    <mat-card *ngIf="items.length === 0">
+        <div class="Carrito-vacio">
+            <span>Tu carrito está vacío.</span>
+            <span>Comienza a comprar ya</span>
+        </div>
+    </mat-card>
+    <a routerLink="/store">Ir a la Tienda</a>
+    <div class="product-grid">
+        <mat-card class="product-card" *ngFor="let item of items">
+            <img mat-card-image [src]="item.image" [alt]="item.name">
+            <mat-card-content>
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.description }}</p>
+                <p><strong>Precio: </strong>{{ item.price }}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <button mat-raised-button color="warn" *ngIf="items.length > 0" (click)="clearCart()">Vaciar Carrito</button>
+</div>

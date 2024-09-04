@@ -43,13 +43,15 @@
             </mat-card-content>
             <mat-card-actions>
                 <div class="button-container">
-                    <a href="#" class="button yellow">Añadir al carrito!!</a>
+                    <a (click)="addToCart(product)" class="button yellow">Añadir al carrito!!</a>
                     <a [href]="url" class="button red">Comprar!!!</a>
                 </div>                
             </mat-card-actions>
         </mat-card>
         </div>
     </div>
+    <b><a class="nav-link text-dark-brown" routerLink="/cart" style="color: #69140e;">Ir al carrito</a></b>
+
     <div class="banner-container">
         <div class="banner-content">
             <div class="row">
