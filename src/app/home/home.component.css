@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-section {
-  background-image: url('img/INICIO\ .png');
+  background-image: url('../../../public/img_home/INICIO.png');
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -95,6 +95,98 @@
   z-index: 10; /* Asegura que el ícono esté por encima del círculo */
 }
 
+
+
+
+/* Empty Section */
+.empty-section {
+  height: 150px; /* Ajusta la altura según sea necesario */
+  background-color: #ffffff; /* Color de fondo opcional para diferenciar la sección */
+  margin: 50px 0; /* Espacio vertical superior e inferior */
+}
+
+
+
+
+/* Mat Grid List */
+mat-grid-list {
+  width: 100%;
+  height: 100%;
+}
+
+/* Columnas dentro del Grid */
+mat-grid-tile {
+  padding: 300px; /* Espaciado interno opcional */
+
+}
+
+/* Imagen en la columna izquierda */
+.left-image {
+  border-radius: 10px;
+  width: 70%;
+  height: auto /* Mantiene las proporciones de la imagen */;
+margin-left: 150px;
+}
+
+
+/* Contenido en la columna derecha */
+.right-content {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-start;
+  margin-right: 150px;
+
+}
+
+.right-content h2 {
+  font-size: 35px;
+  color: #69140e
+}
+
+.right-content h3 {
+  font-size: 22px;
+  color: #d58936;
+  margin-bottom: 15px;
+}
+
+.right-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.right-content .right-image {
+  width: 100%;
+  height: auto; /* Mantiene las proporciones de la imagen */
+  border-radius: 10px; /* Opcional: redondea las esquinas de la imagen */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .cards-section {
@@ -117,6 +209,8 @@
   }
 }
 
+
+
 @media (max-width: 480px) {
   .hero-section {
     height: 400px;
@@ -133,4 +227,15 @@
   .hero-content p {
     font-size: 16px;
   }
+  .split-section {
+    flex-direction: column;
+  }
+
+  .split-right img {
+    width: 100%; /* Asegura que la imagen derecha ocupe todo el ancho en pantallas pequeñas */
+  }
 }
+
+
+
+
