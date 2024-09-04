@@ -1,0 +1,48 @@
+h2.mat-dialog-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+mat-dialog-content {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+mat-dialog-content p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+mat-dialog-content p strong {
+    color: #333;
+}
+
+mat-dialog-actions {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+button.mat-button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    
+}
