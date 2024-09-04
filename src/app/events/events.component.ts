@@ -80,8 +80,12 @@ export class EventsComponent {
     });
   }
 
-  navigateToOtraPagina() {
+  navigateToStore() {
     this.router.navigate(['/store']); 
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/home']); 
   }
 
 }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
+import { MatButton } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 
@@ -8,7 +9,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   standalone: true,
   templateUrl: './event-dialog.component.html',
   styleUrls: ['./event-dialog.component.css'],
-  imports: [MatDialogModule, CommonModule]
+  imports: [MatDialogModule, CommonModule,MatButton]
 })
 export class EventDialogComponent {
 
