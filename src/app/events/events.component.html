@@ -3,7 +3,7 @@
     <h4>ENTRADAS YA A LA VENTA!!!</h4>
     <h1>Gran Concierto</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <button mat-raised-button color="primary">Mostrar más</button>
+    <button mat-raised-button color="accent" (click)="navigateToOtraPagina()">Mas Información</button>
   </div>
 </div>
 
@@ -22,8 +22,8 @@
           <p class="mat-body text-brown">Fecha: {{ event.date }}</p>
           <p class="mat-body text-brown">Ubicación: {{ event.location }}</p>
         </mat-card-content>
-        <mat-card-actions>
-          <button mat-button color="primary" (click)="openEventDetails(event)">Ver Detalles</button>
+        <mat-card-actions >
+          <button style="color: rgb(255, 157, 0);" mat-button (click)="openEventDetails(event)">Ver Detalles</button>
         </mat-card-actions>
       </mat-card>
     </div>
