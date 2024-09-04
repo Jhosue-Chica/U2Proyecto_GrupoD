@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{ data.event.name }}</h2>
+<mat-dialog-content>
+    <img *ngIf="data.event.image" [src]="data.event.image" class="img-fluid mb-3" alt="{{ data.event.name }}">
+    <p><strong>Fecha:</strong> {{ data.event.date }}</p>
+    <p><strong>Ubicación:</strong> {{ data.event.location }}</p>
+    <p>{{ data.event.description }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button color="accent" (click)="close()">Cerrar</button>
+</mat-dialog-actions>

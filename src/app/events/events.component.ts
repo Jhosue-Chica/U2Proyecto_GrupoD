@@ -1,11 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import * as bootstrap from 'bootstrap';
+import { MatDialog } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { EventDialogComponent } from '../event-dialog/event-dialog.component';
 
 @Component({
   selector: 'app-events',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCardModule,   
+    MatDialogModule,
+    EventDialogComponent
+  ],
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css']
 })
@@ -55,20 +65,14 @@ export class EventsComponent {
     }
   ];
   
-
   selectedEvent: any;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  constructor(private dialog: MatDialog) { } // Injectamos MatDialog en el constructor
 
   openEventDetails(event: any): void {
     this.selectedEvent = event;
-    const modalElement = document.getElementById('eventModal');
-    if (modalElement) {
-      const modal = new bootstrap.Modal(modalElement);
-      modal.show();
-    }
+    this.dialog.open(EventDialogComponent, {
+      data: { event: this.selectedEvent }
+    });
   }
 }
